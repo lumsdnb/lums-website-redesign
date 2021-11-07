@@ -25,8 +25,6 @@
 	<Footer />
 </div>
 
-<slot />
-
 <style>
 	.main-content {
 		height: 90vh;
