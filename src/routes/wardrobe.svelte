@@ -6,6 +6,6 @@
 	<title>wardrobe</title>
 </svelte:head>
 
-<svelte:component this={Clothing} />
+<h1 class="text-5xl">digital wardrobe</h1>
 
-<h1>digital wardrobe</h1>
+<svelte:component this={Clothing} />
