@@ -70,6 +70,7 @@
 		top: 0;
 		width: 100%;
 		text-align: center;
+		height: 5vh;
 	}
 	.desktop-nav {
 		list-style: none;
@@ -117,8 +118,43 @@
 	}
 	.active-tab {
 		opacity: 1;
-		text-decoration: underline;
-		text-decoration-thickness: 1.5px;
-		text-underline-offset: 5px;
+	}
+
+	/* Slide in underline */
+	a {
+		display: block;
+		position: relative;
+		padding: 0.2em 0;
+	}
+	a::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.1em;
+		color: #000;
+		background-color: rgb(0, 0, 0);
+		opacity: 0;
+		transition: opacity 100ms, transform 100ms;
+	}
+
+	a:hover::after,
+	a:focus::after {
+		opacity: 1;
+		transform: translate3d(0, 0.2em, 0);
+	}
+	li a {
+		overflow: hidden;
+	}
+
+	li a::after {
+		opacity: 1;
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	li a:hover::after,
+	li a:focus::after {
+		transform: translate3d(0, 0, 0);
 	}
 </style>
